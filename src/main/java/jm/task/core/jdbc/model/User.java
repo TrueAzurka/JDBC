@@ -5,6 +5,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Table
+//@Entity
 public class User {
     @Id
     private Long id;
@@ -58,5 +59,10 @@ public class User {
 
     public void setAge(Byte age) {
         this.age = age;
+    }
+
+    @Override
+    public String toString() {
+        return "ID пользователя: " + getId() + " | Имя пользователя: " + getName() + " | Фамилия пользователя: " + getLastName() + " | Возраст пользователя: " + getAge();
     }
 }
